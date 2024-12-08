@@ -2,8 +2,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-analytics.js";
 import {
-  getAuth,
-  createUserWithEmailAndPassword,
+  getAuth, // GoogleAuthProvider
+  signInWithEmailAndPassword, //GoogleAuthProvider,
+  //signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 
 // Your web app's Firebase configuration
@@ -23,7 +24,13 @@ const analytics = getAnalytics(app);
 
 // Initialize Firebase Authentication
 const auth = getAuth(app); // Initialize the auth instance here
+/*auth.languageCode = 'it'; 
 
+const provider1 = new GoogleAuthProvider(); 
+const googlelogin = document.getElementById("googleSignUp");
+googlelogin.addEventListener("click", function{
+  alert(5);
+}); */
 // Wait for DOM to load before attaching event listeners
 document.addEventListener("DOMContentLoaded", () => {
   const submit = document.getElementById("submit"); // Reference the correct button ID
@@ -35,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed up successfully
         const user = userCredential.user;
-        alert("Account created successfully! Welcome!");
+        alert("Account Loggedin successfully! Welcome!");
         console.log("User Info:", user); // Log user information for debugging
         window.location.href = "nft-part/nft.html";
       })
