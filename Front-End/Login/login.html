@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Cormorant+Garamond:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- Loader for the login page -->
+    <div id="loader" class="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="container">
+      <div class="header">
+        <h1>artIntel.</h1>
+      </div>
+      <h2>Log In</h2>
+      <form id="loginForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">Log In</button>
+      </form>
+
+      <div class="oauth-buttons">
+        <button
+          class="oauth google"
+          onclick="window.location.href='YOUR_GOOGLE_OAUTH_URL'"
+        >
+          <img src="google.png" alt="Google Logo" class="oauth-logo" />
+          Google
+        </button>
+        <button
+          class="oauth microsoft"
+          onclick="window.location.href='YOUR_MICROSOFT_OAUTH_URL'"
+        >
+          <img src="microsoft.png" alt="Microsoft Logo" class="oauth-logo" />
+          Microsoft
+        </button>
+        <button
+          class="oauth twitter"
+          onclick="window.location.href='YOUR_TWITTER_OAUTH_URL'"
+        >
+          <img src="twitter.jpg" alt="Twitter Logo" class="oauth-logo" />
+          Twitter
+        </button>
+      </div>
+
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+
+    <script src="login.js"></script>
+    <script>
+      // Show loader when the page is loading
+      document.body.classList.add("loading");
+
+      // Hide loader when the page has fully loaded
+      window.onload = () => {
+        document.body.classList.remove("loading");
+      };
+    </script>
+  </body>
+</html>
