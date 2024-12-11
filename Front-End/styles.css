@@ -1,3 +1,110 @@
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #333;
+}
+
+.back-button,
+.signup-button {
+  background-color: #8b61c2;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.signup-button {
+  display: inline-block;
+  text-align: center;
+}
+
+.back-button:hover,
+.signup-button:hover {
+  background-color: #6a4899;
+}
+.galleries-section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+}
+
+.galleries-section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.gallery-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(65%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover .gallery-info {
+  transform: translateY(0);
+}
+
+.gallery-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #8b61c2;
+}
+
+.gallery-info p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.gallery-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #8b61c2;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.gallery-link:hover {
+  background-color: #6a4899;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* General Reset */
 * {
     margin: 0;
