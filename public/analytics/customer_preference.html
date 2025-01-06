@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customer Preference Analytics</title>
+    <link rel="stylesheet" href="customer_preference.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">artIntel.</div>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="E:/Smruie In Uni/PAPERS AND PROJECTS/DTL/Web Dev/public/index.html"
+              >Home</a
+            >
+          </li>
+          <li><a href="#charts">Visualizations</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="intro">
+        <h1>Customer Preference Analytics</h1>
+        <p>
+          Explore customer preferences, spending habits, and behavioral trends
+          through interactive visualizations.
+        </p>
+      </section>
+
+      <section id="charts">
+        <h2>Interactive Visualizations</h2>
+        <div class="chart-container">
+          <canvas id="ageDistributionChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="preferenceChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="viewsLikesChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="feedbackSentimentChart"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>&copy; 2024 artIntel. All rights reserved.</p>
+    </footer>
+
+    <script src="customer_preference.js"></script>
+  </body>
+</html>
