@@ -1,0 +1,189 @@
+<!-- index.html  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the artIntel Community for artists and enthusiasts to connect and share insights about modern art, events, and more.">
+    <title>artIntel Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo">artIntel Community</a>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search posts, events, or members...">
+                <button class="filter-button" aria-label="Filter posts">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M2 4h12M4 8h8M6 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    Filter
+                </button>
+            </div>
+            <nav class="nav-tabs">
+                <a href="index.html" class="nav-tab">Feed</a>
+                <a href="events.html" class="nav-tab">Events</a>
+                <a href="#" class="nav-tab">Galleries</a>
+                <a href="artists.html" class="nav-tab">Artists</a>
+            </nav>
+        </header>
+
+        <div class="main-content">
+            <main>
+                <div class="create-post" id="createPostBtn">Create New Post</div>
+
+                <!-- Popup Modal for Post Creation -->
+                <div id="postPopup" class="popup-overlay" style="display: none;" aria-hidden="true">
+                    <div class="popup-content">
+                        <h2>Create New Post</h2>
+                        <input type="text" id="userName" placeholder="Enter your name" required>
+                        <textarea id="postDescription" placeholder="Enter a description for your artwork" required></textarea>
+                        <input type="file" id="imageUpload" accept="image/*" required>
+                        <button id="submitPostBtn">Submit Post</button>
+                        <button id="closePopupBtn">Cancel</button>
+                    </div>
+                </div>
+                                                
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-meta">
+                            <strong>Michael Brown</strong> · Photographer · Jan 6, 11:00 AM
+                        </div>
+                    </div>
+                    <h2>Capturing Urban Life</h2><br>
+                    <div class="post-image">
+                        <img src="https://img.freepik.com/premium-photo/capturing-soul-urban-landscapes-painting-architecture-building-street-ar-32_1000124-97950.jpg" alt="Modern Abstracts" style="width: 100%; height: 100%; border-radius: 8px;">
+                    </div>
+                    <p>My latest series focuses on the unspoken stories of city streets and their residents.</p>
+                    <div class="post-actions">
+                        <div class="action-button">❤️ 120</div>
+                        <div class="action-button">💬 34</div>
+                        <div class="action-button">Share</div>
+                    </div>
+                </div>
+                <br>
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-meta">
+                            <strong>Olivia Clarke</strong> · Digital Artist · Jan 3, 01:45 PM
+                        </div>
+                    </div>
+                    <h2>New Digital Artwork: Echoes</h2><br>
+                    <div class="post-image">
+                        <img src="https://th.bing.com/th/id/R.e6149ed9f768fc9682dd3f7abc3b1f05?rik=76t36R4wviy4%2bw&riu=http%3a%2f%2faiartshop.com%2fcdn%2fshop%2ffiles%2fdigital-echoes-abstract-ai-art-789_1200x1200.webp%3fv%3d1716208470&ehk=mvsryPv4rXGDhaaL%2bCwOj2Z1wPWwCjAUottldg83ZS4%3d&risl=&pid=ImgRaw&r=0" alt="Modern Abstracts" style="width: 40%; height: 100%; border-radius: 8px;">
+                    </div>
+                    <p>Experimenting with fractal patterns and vibrant color palettes in this new piece.</p>
+                    <div class="post-actions">
+                        <div class="action-button">❤️ 92</div>
+                        <div class="action-button">💬 18</div>
+                        <div class="action-button">Share</div>
+                    </div>
+                </div>
+                <br>
+                
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-meta">
+                            <strong>Emily Parker</strong> · Painter · Jan 8, 02:00 PM
+                        </div>
+                    </div>
+                    <h2>Exploring Color and Motion</h2><br>
+                    <div class="post-image">
+                        <img src="https://images.stockcake.com/public/5/5/e/55e6aef4-a438-4a8f-8747-3584b58bba83_large/art-gallery-viewing-stockcake.jpg" alt="Modern Abstracts" style="width: 100%; height: 100%; border-radius: 8px;">
+                    </div>
+                    <p>Sharing my latest piece inspired by the vibrancy of nature and the dynamics of movement.</p>
+                    <div class="post-actions">
+                        <div class="action-button">❤️ 78</div>
+                        <div class="action-button">💬 21</div>
+                        <div class="action-button">Share</div>
+                    </div>
+                </div>
+                <br>
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-meta">
+                            <strong>Isabella Gomez</strong> · Sculptor · Jan 5, 04:00 PM
+                        </div>
+                    </div>
+                    <h2>New Sculpture: The Embrace</h2><br>
+                    <div class="post-image">
+                        <img src="https://tse1.mm.bing.net/th?id=OIP.LcGzhSoKI4EF9_IbS39RfAHaEh&rs=1&pid=ImgDetMain" alt="Modern Abstracts" style="width: 50%; height: 100%; border-radius: 8px;">
+                    </div>
+                    <p>A fusion of metal and wood, this piece celebrates human connection and unity.</p>
+                    <div class="post-actions">
+                        <div class="action-button">❤️ 89</div>
+                        <div class="action-button">💬 15</div>
+                        <div class="action-button">Share</div>
+                    </div>
+                </div>
+                <br>
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-meta">
+                            <strong>Sarah Chen</strong> · Gallery Owner · Jan 7, 03:30 PM
+                        </div>
+                    </div>
+                    <h2>New Exhibition Opening - Modern Abstracts</h2>
+                    <br>
+                    <div class="post-image">
+                        <img src="https://t4.ftcdn.net/jpg/07/17/90/77/360_F_717907775_LZh9AqzG1qAlcFimXlZBZbMf9UKxMvUs.jpg" alt="Modern Abstracts" style="width: 100%; height: 100%; border-radius: 8px;">
+                    </div>
+                    <p>Excited to announce our new exhibition featuring emerging artists in the abstract space. Opening night is next Friday!</p>
+                    <div class="post-actions">
+                        <div class="action-button">❤️ 45</div>
+                        <div class="action-button">💬 12</div>
+                        <div class="action-button">Share</div>
+                    </div>
+                </div>
+                <br>
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-meta">
+                            <strong>Ethan Carter</strong> · Curator · Jan 4, 07:15 PM
+                        </div>
+                    </div>
+                    <h2>Gallery Talk: Evolution of Abstract Art</h2><br>
+                    <div class="post-image">
+                        <img src="https://vinchyart.com/cdn/shop/articles/the_evolution_of_abstract_art.jpg?v=1728386263&width=1024" alt="Modern Abstracts" style="width: 50%; height: 100%; border-radius: 8px;">
+                    </div>                        
+                    
+                    <p>Join us for an engaging discussion on the history and future of abstract art.</p>
+                    <div class="post-actions">
+                        <div class="action-button">❤️ 65</div>
+                        <div class="action-button">💬 10</div>
+                        <div class="action-button">Share</div>
+                    </div>
+                </div>
+                <br>
+                                
+                <!-- Repeat and modify the above format for 25 more cards, changing names, roles, titles, descriptions, dates, likes, and comments to make them unique -->
+                
+            </main>
+                <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h2 class="sidebar-title">Community Stats</h2>
+                    <div class="stat-item">
+                        <span class="stat-icon">🎨</span>
+                        <span>2,456 Artists</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">🏛️</span>
+                        <span>342 Galleries</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">💼</span>
+                        <span>189 Dealers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-icon">👥</span>
+                        <span>5,678 Art Enthusiasts</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
